@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise#5</title>
+    <style>
+        label{
+            font-size: 1.5em;
+        }
+        button{
+            display: flex;
+            margin-top: 1em;
+            
+       
+        }
+    </style>
+</head>
+<body>
+    <form>
+       
+        <label>password (min 6 characters):
+        <input type="password" id="pass"  onkeydown="myfunction()" placeholder="password"></label><span id="msg1"></span>
+        <br><br>
+        
+        
+        <label> Repeat password :
+        <input type="password" style="margin-left: 5em;" id="passR" onkeydown="myfunction()" placeholder="password" ></label><span id="msg2"></span>
+        
+
+        <button type="submit" id="btn" >submit</button>
+    </form>
+    <script >
+      let btn=document.getElementById("btn");
+     btn.style.visibility="hidden";
+
+     let msg1=document.getElementById("msg1");
+     let msg2=document.getElementById("msg2");
+     msg1.style.color="red";
+     msg2.style.color="red";
+
+     function myfunction() {
+     let pass=document.getElementById("pass").value;
+     let passR=document.getElementById("passR").value;
+         
+     if(pass.length >= 6 ){
+        msg1.innerHTML="correct password";
+
+        if(passR < 6){
+        msg2.innerHTML="Don`t match ";}
+
+        else if(passR.value===pass.value && passR.length >= 6){
+             msg2.innerHTML="match password ";
+           btn.style.visibility="visible";
+        }
+        
+     } 
+
+     else{
+         msg1.innerHTML="Too short ";
+     }
+    }
+    
+    
+    </script>
+</body>
+</html>

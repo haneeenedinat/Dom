@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Exercise#7A</title>
+    <style>
+    
+     
+   div{
+       background-color:rgb(238, 236, 238);
+       border:rgb(143, 142, 143) solid 0.1em;
+       padding:1em;
+       font-size: 1.5em;
+   }
+   button{
+       background-color: white;
+       font-size: 1em;
+   }
+ 
+   #none1{
+       display: none;
+   }
+    </style>
+</head>
+<body>
+  
+    <input type="text" placeholder="Song name" id="song">
+    <button type="submit" onclick="function_add()" id="btn">Add Song </button>
+    
+    
+    <i class="far fa-trash-alt" id="none1" ></i>
+        <div>My favorite song </div>
+       <div >My second favorite song </div>
+       <div> I like this one too </div>
+      
+      <script>
+  
+
+let i=document.createElement("i");
+ i.setAttribute("class","far fa-trash-alt");
+ let new_element=document.createElement("div");
+
+   function function_add(){
+   let song=document.getElementById("song").value;
+  
+     if(song !== ""){
+    document.body.appendChild(new_element);
+    new_element.innerHTML=song;
+  
+    new_element.appendChild(i);
+  
+}
+ }
+       
+
+ 
+   i.addEventListener("click" ,function function_remove(){
+       new_element.remove();
+   });
+
+  
+
+
+        
+      </script>
+
+</body>
+</html>

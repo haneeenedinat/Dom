@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise#6</title>
+
+    <style>
+ 
+    </style>
+</head>
+<body>
+    
+    <div style="width: 56vw;margin: 0.5em;border:0.1em solid black">
+    <div style="padding: 0.5em;background-color: rgb(218, 214, 214);font-size: 2em;">What is lorem ipsum?<a href="#" style="font-size: 0.5em;margin-left: 2em;" onclick="show_fun1()" id="show1">Show</a></div>
+    <div style="width:20wh;display: inline-block;padding: 0.5em;" id="Div1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, a aut corrupti temporibus quaerat quibusdam? Officiis minus eveniet sit repudiandae eligendi accusantium, 
+        itaque molestias expedita perferendis rerum provident recusandae dolore consectetur quisquam exercitationem quos velit! Tempore alias adipisci fugit esse dignissimos tenetur, 
+        aliquid, expedita ullam provident laborum nisi minus recusandae unde voluptatem. Placeat non soluta eos distinctio animi provident nesciunt sapiente suscipit tenetur necessitatibus. 
+        Mollitia magni iusto ducimus labore quis corporis, sequi nisi, magnam blanditiis deleniti, laudantium esse illo quos beatae dolores veritatis error. Dignissimos quaerat aliquam nisi 
+        neque earum reprehenderit possimus soluta aut animi, consectetur accusantium veritatis ad consequatur!</div><a href="#" style="font-size: 1em;margin-left: 0.9em;" onclick="hide_fun1()" id="hide1">Hide</a></div>
+        
+
+        
+
+        <div style="border:0.1em solid black;width: 56vw;margin: 0.5em;">
+    <div style="background-color: rgb(218, 214, 214);padding:0.5em;font-size: 2em">Why do we use it?<a href="#" style="font-size: 0.5em;margin-left: 2em;" onclick="show_fun2()" id="show2">Show</a></div>
+    <div style="width:20wh;display: inline-block;padding: 0.5em;" id="Div2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, a aut corrupti temporibus quaerat quibusdam? Officiis minus eveniet sit repudiandae eligendi accusantium,
+         itaque molestias expedita perferendis rerum provident recusandae dolore consectetur quisquam exercitationem quos velit! Tempore alias adipisci fugit esse dignissimos tenetur, 
+         aliquid, expedita ullam provident laborum nisi minus recusandae unde voluptatem. Placeat non soluta eos distinctio animi provident nesciunt sapiente suscipit tenetur necessitatibus. 
+         Mollitia magni iusto ducimus labore quis corporis, sequi nisi, magnam blanditiis deleniti, laudantium esse illo quos beatae dolores veritatis error. Dignissimos quaerat aliquam nisi 
+         neque earum reprehenderit possimus soluta aut animi, consectetur accusantium veritatis ad consequatur!</div><a href="#" style="font-size: 1em;margin-left: 0.9em;" onclick="hide_fun2()" id="hide2">Hide</a></div>
+
+      
+         <div style="border:0.1em solid black;width: 56vw;margin: 0.5em;">   
+    <div style="background-color: rgb(218, 214, 214);padding:0.5em;font-size: 2em" >Where does it come from?<a href="#" style="font-size: 0.5em;margin-left: 2em;" onclick="show_fun3()" id="show3">Show</a></div>
+    <div style="width:20wh;display: inline-block;padding: 0.5em;" id="Div3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates, a aut corrupti temporibus quaerat quibusdam? Officiis minus eveniet sit repudiandae eligendi accusantium,
+         itaque molestias expedita perferendis rerum provident recusandae dolore consectetur quisquam exercitationem quos velit! Tempore alias adipisci fugit esse dignissimos tenetur, 
+         aliquid, expedita ullam provident laborum nisi minus recusandae unde voluptatem. Placeat non soluta eos distinctio animi provident nesciunt sapiente suscipit tenetur necessitatibus.
+          Mollitia magni iusto ducimus labore quis corporis, sequi nisi, magnam blanditiis deleniti, laudantium esse illo quos beatae dolores veritatis error. Dignissimos quaerat aliquam nisi
+           neque earum reprehenderit possimus soluta aut animi, consectetur accusantium veritatis ad consequatur!</div><a href="#" style="font-size: 1em;margin-left: 0.9em;" onclick="hide_fun3()" id="hide3">Hide</a</div>
+     
+
+            <script>
+        function hide_fun1() {
+               let div1=document.getElementById("Div1");
+               let hide1=document.getElementById("hide1");
+               let show1=document.getElementById("show1");
+         
+              div1.style.visibility="hidden";  
+              hide1.style.visibility="hidden"; 
+              show1.style.visibility="visible" ;
+
+       }
+
+       function hide_fun2() {
+        let div2=document.getElementById("Div2");
+        let hide2=document.getElementById("hide2");
+
+        div2.style.visibility="hidden";  
+        hide2.style.visibility="hidden"; 
+        show2.style.visibility="visible" ; 
+           
+       }
+
+       function hide_fun3() {
+
+        let div3=document.getElementById("Div3");       
+       let hide3=document.getElementById("hide3");
+
+        div3.style.visibility="hidden";  
+        hide3.style.visibility="hidden";  
+        show3.style.visibility="visible" ;
+        
+       }
+
+       function show_fun1() {
+           let div1=document.getElementById("Div1");
+           let show1=document.getElementById("show1");
+           let hide1=document.getElementById("hide1");
+
+           div1.style.visibility="visible";
+           show1.style.visibility="hidden";
+           hide1.style.visibility="visible";
+      
+       }
+
+       function show_fun2() {
+           let div2=document.getElementById("Div2");
+           let show2=document.getElementById("show2");
+           let hide2=document.getElementById("hide2");
+
+           div2.style.visibility="visible";
+           show2.style.visibility="hidden";
+           hide2.style.visibility="visible";
+      
+       }
+
+       function show_fun3() {
+           let div2=document.getElementById("Div3");
+           let show2=document.getElementById("show3");
+           let hide2=document.getElementById("hide3");
+
+           div2.style.visibility="visible";
+           show2.style.visibility="hidden";
+           hide2.style.visibility="visible";
+      
+       }
+          
+            </script>
+</body>
+</html>

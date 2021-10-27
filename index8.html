@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercise#8</title>
+    <style>
+        div{
+            width: 20vw;
+            height:5vh;
+            border:solid 0.1em black;
+        }
+        button{
+            width: 2em;
+            height: 2em;
+        }
+    </style>
+</head>
+<body>
+
+   <button style="background: rgb(240, 221, 193);"></button>
+   <button style="background: rgb(192, 63,  153);"></button>
+   <button style="background: rgb(25, 135,  179);"></button>
+   <button style="background: rgb(243, 19,   30);"></button>
+   <button style="background: rgb(233, 219,  30);"></button>
+   <button style="background: rgb(52, 32,   165);"></button>
+   <button style="background: rgb(6, 136,    45);"></button>
+   <button style="background: rgb(223, 147,  33);"></button>
+   <button style="background: rgb(235, 108, 224);"></button>
+   <button style="background: rgb(38, 197,  136);"></button>
+   
+   <button style="background: rgb(136, 132, 127);"></button>
+   <button style="background: rgb(228, 179, 213);"></button>
+   <button style="background: rgb(230, 132, 107);"></button>
+   <button style="background: rgb(211, 218, 120);"></button>
+   <button style="background: rgb(85, 165,   32);"></button>
+   <button style="background: rgb(104, 95,  158);"></button>
+   <button style="background: rgb(73, 146,   95);"></button>
+   <button style="background: rgb(119, 50,  126);"></button>
+   <button style="background: rgb(161, 49,  111);"></button>
+   <button style="background: rgb(87, 243,  183);"></button>
+
+
+
+  <div>
+
+  </div>
+    <script>
+
+let btn=document.querySelectorAll("button");
+let Div=document.querySelector("div");
+
+btn.forEach(function (btn){
+    btn.onclick=function(){
+   let colors= btn.getAttribute("style");
+   let subcolor=colors.substr(12,18);
+
+      Div.innerHTML=subcolor;
+     Div.style.backgroundColor=subcolor;
+    }
+});
+    </script>
+</body>
+</html>

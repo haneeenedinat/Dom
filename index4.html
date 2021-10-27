@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise#4</title>
+    <style>
+        div{
+            width: 600px;
+            height: 100px;
+            border:black 0.1em solid;
+        }
+
+        #type{
+            padding-right: 4em;
+        }
+
+        div{
+            margin-top: 0.5em;
+           
+        }
+    </style>
+</head>
+<body>
+
+    
+    <select id="type" onchange="function1()">
+        <option value="Ar" id="Ar">Arial</option>
+        <option value="Co" id="Co">Courier New</option>
+    </select>
+
+    <select id="size" onchange="function2()">
+        <option value="12">12pt</option>
+        <option value="14">14pt</option>
+        <option value="16">16pt</option>
+    </select>
+    <input type="checkbox" value="Italic" onchange="function3()">Italic
+    <input type="checkbox" value="Bold" onchange="function4()">Bold
+    <input type="checkbox" value="Underline" onchange="function5()">Underline
+
+    <div id="Div">The quick brown fox jumps over the lazy dog</div>
+
+
+    <script>
+    function function1(){
+   const element1=document.getElementById("type").value;
+  
+   if(element1==="Ar"){
+       document.getElementById("Div").style.fontFamily="'Lucida Sans'";
+   }
+
+   if(element1==="Co"){
+       document.getElementById("Div").style.fontFamily="'Courier New'";
+   }
+}
+
+
+function function2(){
+    const element2=document.getElementById("size").value;
+     
+    if(element2==="12")
+    document.getElementById("Div").style.fontSize="12pt";
+
+    else if(element2==="14")
+    document.getElementById("Div").style.fontSize="14pt";
+
+    else if(element2==="16")
+    document.getElementById("Div").style.fontSize="16pt";
+}
+
+function function3(){
+    document.getElementById("Div").style.fontStyle=" italic";
+}
+
+function function4() {
+    document.getElementById("Div").style.fontWeight="bold";
+    
+}
+
+
+function function5() {
+    document.getElementById("Div").style.textDecoration="underline";
+    
+}
+
+
+
+    </script>
+ </body>
+</html>
